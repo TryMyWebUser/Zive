@@ -179,8 +179,6 @@ function closeSearch() {
 
 <!-- SweetAlert2 CDN -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<!-- <script src="https://checkout.razorpay.com/v1/checkout.js"></script> -->
-<!-- <script type="module" src="assets/js/checkout.js"></script> -->
 <script type="module">
     import Toastify from 'https://cdn.jsdelivr.net/npm/toastify-js/+esm';
 

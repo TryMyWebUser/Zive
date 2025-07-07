@@ -25,7 +25,7 @@ if ($orderId) {
         
         // 2. Get ordered products if order exists
         if ($orderDetails) {
-            $stmt = $db->prepare("SELECT p.title, p.price, oi.quantity FROM order_items oi JOIN products p ON oi.product_id = p.id WHERE oi.order_id = ?");
+            $stmt = $db->prepare("SELECT p.img, p.title, p.price, oi.quantity FROM order_items oi JOIN products p ON oi.product_id = p.id WHERE oi.order_id = ?");
             $stmt->bind_param('i', $orderDetails['id']);
             $stmt->execute();
             $products = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
@@ -87,6 +87,16 @@ if ($orderId) {
                 }
 
                 try {
+                    // Show waiting message before verification
+                    Swal.fire({
+                        title: "Verifying Payment...",
+                        html: `<p>Please wait a few moments while we verify your payment.</p>`,
+                        allowOutsideClick: false,
+                        didOpen: () => {
+                            Swal.showLoading();
+                        }
+                    });
+
                     const response = await fetch("libs/api/payment_verify_api.php", {
                         method: "POST",
                         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -94,6 +104,9 @@ if ($orderId) {
                     });
 
                     const result = await response.json();
+
+                    // Close the loading popup
+                    Swal.close();
 
                     if (result.ok) {
                         // Build product list HTML
@@ -122,9 +135,9 @@ if ($orderId) {
                                 <p>Thank you for your purchase!</p>
                             `,
                             confirmButtonText: "Back to Home",
-                            // footer: 'A confirmation has been sent to your email'
+                            footer: 'A confirmation has been sent to your email'
                         });
-                        
+
                         location.href = "index.php";
                     } else {
                         await Swal.fire({
@@ -139,6 +152,7 @@ if ($orderId) {
                         location.href = "index.php";
                     }
                 } catch (err) {
+                    Swal.close(); // in case the error happens before close
                     await Swal.fire({
                         icon: "error",
                         title: "Verification Error",
