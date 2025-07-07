@@ -35,7 +35,7 @@ class User
         Session::start();
         $conn = Database::getConnect();
         
-        $sql = "SELECT `id`, `password` FROM `users` WHERE `username` = '$username' OR `email` = '$username'";
+        $sql = "SELECT `id`, `password` FROM `users` WHERE `username` = '$username' OR `email` = '$username' OR `email` = '$username'";
         $res = $conn->query($sql);
         if ($res->num_rows === 1)
         {

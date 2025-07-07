@@ -1,14 +1,12 @@
 <?php
 
-use Razorpay\Api\Account;
-
 include "libs/load.php";
 
 $userAccount = Operations::getUser();
 $category = Operations::getCategoryChecker();
 
 // Check if the user is logged in
-$isLoggedIn = Session::get('Loggedin');
+$isLoggedIn = Session::get('accountUser');
 
 ?>
 
@@ -98,24 +96,24 @@ $isLoggedIn = Session::get('Loggedin');
                     <li><a href="contact.php">Contact Us</a></li>
                 </ul>
 
-                <ul class="nav-menu nav-menu-social align-to-right">
-                    <li>
-                        <a href="<?= Session::get('accountUser') ? 'profile.php' : 'login.php'; ?>">
-                            <i class="lni lni-user"></i>
-                        </a>
-                    </li>
-                    <li> 
-                        <?php if (Session::get('accountUser')) { ?>
-                            <a href="#" onclick="openCart()">
-                                <i class="lni lni-shopping-basket"></i><span class="dn-counter"><?= Operations::getUserCartCount() ?></span>
-                            </a>
-                        <?php } ?>
-                        <!-- <div class="mt-2">
-                            <a href="tel:9952467399" class="btn btn-dark rounded" style="padding-right: 25px;">Get a Quate</a>
-                        </div> -->
-                    </li>
-                </ul>
             </div>
+            <ul class="nav-menu nav-menu-social align-to-right">
+                <li>
+                    <a href="<?= $isLoggedIn ? 'profile.php' : 'login.php'; ?>">
+                        <i class="lni lni-user"></i>
+                    </a>
+                </li>
+                <li> 
+                    <?php if ($isLoggedIn) { ?>
+                        <a href="#" onclick="openCart()">
+                            <i class="lni lni-shopping-basket"></i><span class="dn-counter"><?= Operations::getUserCartCount() ?></span>
+                        </a>
+                    <?php } ?>
+                    <!-- <div class="mt-2">
+                        <a href="tel:9952467399" class="btn btn-dark rounded" style="padding-right: 25px;">Get a Quate</a>
+                    </div> -->
+                </li>
+            </ul>
         </nav>
     </div>
 </div>

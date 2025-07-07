@@ -264,8 +264,6 @@ class Operations
         return $res->fetch_all(MYSQLI_ASSOC); // always an array (even if empty)
     }
 
-
-
 }
 
 ?>

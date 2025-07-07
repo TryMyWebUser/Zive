@@ -8,14 +8,14 @@ class Database
     {
         if (Database::$conn == null)
         {
-            $server = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "zive";
             // $server = "localhost";
-            // $username = "trymywebsites_zive";
-            // $password = "zive@2025";
-            // $dbname = "trymywebsites_zivedb";
+            // $username = "root";
+            // $password = "";
+            // $dbname = "zive";
+            $server = "localhost";
+            $username = "trymywebsites_zive";
+            $password = "zive@2025";
+            $dbname = "trymywebsites_zivedb";
 
             // create connection
             $connection = new mysqli($server, $username, $password, $dbname);

@@ -1,3 +1,12 @@
+<?php
+
+include "libs/load.php";
+
+// Start a session
+Session::start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
     <head>
@@ -99,7 +108,7 @@
                                 if ($pro['latest'] != 'Best Collections') {
                         ?>
                         <!-- Single -->
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-6">
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-6 mb-4">
                             <div class="product_grid card b-0 mb-0">
                                 <div class="position-absolute d-flex flex-column">
                                     <?php if (!empty($pro['discount'])) { ?>

@@ -1,3 +1,12 @@
+<?php
+
+include "libs/load.php";
+
+// Start a session
+Session::start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
     <head>

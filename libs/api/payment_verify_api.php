@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once '../load.php';
+Session::start();
 require_once __DIR__ . '/../Payment/HdfcGateway.php';
 
 header('Content-Type: application/json');

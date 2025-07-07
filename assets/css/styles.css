@@ -1637,7 +1637,7 @@ nav a:hover {
 
 .navigation-portrait .nav-menu.nav-menu-social {
     width: 100%;
-    text-align: center
+    text-align: end
 }
 
 .nav-menu.nav-menu-social>li {
@@ -2633,9 +2633,9 @@ li._my_prt_list a span {
     position: relative;
     top: 3px;
 }
-.navigation-portrait .nav-menu.nav-menu-social {
-    display: none;
-}
+/*.navigation-portrait .nav-menu.nav-menu-social {*/
+/*    display: none;*/
+/*}*/
 .mobile_nav .account-drop .btn.btn-order-by-filt img.avater-img {
     width: 25px;
     border-radius: 50%;
