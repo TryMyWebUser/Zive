@@ -1,0 +1,7 @@
+{
+    "MERCHANT_ID":"SG2972",
+    "PRIVATE_KEY_PATH":"privateKey.pem",
+    "PUBLIC_KEY_PATH":"key_09d7be914e1f41f7830eec259da151b0.pem",
+    "KEY_UUID":"key_09d7be914e1f41f7830eec259da151b0",
+    "PAYMENT_PAGE_CLIENT_ID":"hdfcmaster"
+}
