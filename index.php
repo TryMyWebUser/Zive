@@ -121,7 +121,7 @@ Session::start();
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="shop_thumb position-relative">
-                                        <a class="card-img-top d-block overflow-hidden" href="product.php?data=<?= $pro['category'] ?>">
+                                        <a class="card-img-top d-block overflow-hidden" href="single_product.php?data=<?= $pro['title'] ?>">
                                             <img class="card-img-top" src="assets/<?= $pro['img'] ?>" alt="<?= $pro['title'] ?>" />
                                         </a>
                                         <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
@@ -136,7 +136,7 @@ Session::start();
                                     <div class="text-left">
                                         <div class="text-center">
                                             <h5 class="fw-normal fs-md mb-0 lh-1 mb-1">
-                                                <a href="product.php?data=<?= $pro['category'] ?>">
+                                                <a href="single_product.php?data=<?= $pro['title'] ?>">
                                                     <?= $pro['title'] ?>
                                                 </a>
                                             </h5>
@@ -202,7 +202,7 @@ Session::start();
 										</div>
 										<div class="card-body p-0">
                                             <div class="shop_thumb position-relative">
-                                                <a class="card-img-top d-block overflow-hidden" href="product.php?data=<?= $pro['category'] ?>">
+                                                <a class="card-img-top d-block overflow-hidden" href="single_product.php?data=<?= $pro['title'] ?>">
                                                     <img class="card-img-top" src="assets/<?= $pro['img'] ?>" alt="<?= $pro['title'] ?>" />
                                                 </a>
                                                 <div class="product-hover-overlay bg-dark d-flex align-items-center justify-content-center">
@@ -217,7 +217,7 @@ Session::start();
 											<div class="text-left">
 												<div class="text-center">
 													<h5 class="fw-normal fs-md mb-0 lh-1 mb-1">
-                                                        <a href="product.php?data=<?= $pro['category'] ?>">
+                                                        <a href="single_product.php?data=<?= $pro['title'] ?>">
                                                             <?= $pro['title'] ?>
                                                         </a>
                                                     </h5>

@@ -81,7 +81,7 @@ Session::start();
                                 </div>
                                 <div class="card-body p-0">
                                     <div class="shop_thumb position-relative">
-                                        <a class="card-img-top d-block overflow-hidden" data-add-to-cart href="product.php?data=<?= $pro['category'] ?>"
+                                        <a class="card-img-top d-block overflow-hidden" data-add-to-cart href="single_product.php?data=<?= $pro['title'] ?>"
                                             data-id="<?= $pro['id']; ?>">
                                             <img class="card-img-top" src="assets/<?= $pro['img'] ?>" alt="<?= $pro['title'] ?>" />
                                         </a>
@@ -98,7 +98,7 @@ Session::start();
                                     <div class="text-left">
                                         <div class="text-center">
                                             <h5 class="fw-normal fs-md mb-0 lh-1 mb-1">
-                                                <a href="product.php?data=<?= $pro['category'] ?>">
+                                                <a href="single_product.php?data=<?= $pro['title'] ?>">
                                                     <?= $pro['title'] ?>
                                                 </a>
                                             </h5>

@@ -41,6 +41,14 @@ class Operations
         $result = $conn->query($sql);
         return iterator_to_array($result);
     }
+    public static function getProWhere()
+    {
+        $conn = Database::getConnect();
+        $title = $_GET['data'];
+        $sql = "SELECT * FROM `products` WHERE `title` = '$title'";
+        $result = $conn->query($sql);
+        return $result ? $result->fetch_assoc() : null;
+    }
     public static function getRV()
     {
         $conn = Database::getConnect();
@@ -140,15 +148,6 @@ class Operations
 
         return null; // Return null if no user is found
     }
-
-    // public static function getUserAccount()
-    // {
-        // $conn = Database::getConnect();
-    //     $loguser = Session::get('accountUser');
-    //     $sql = "SELECT * FROM `users` WHERE `user` = '$loguser'";
-    //     $result = $conn->query($sql);
-    //     return $result->fetch_assoc();
-    // }
 
     public static function getuserProfile()
     {
