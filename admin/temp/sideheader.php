@@ -59,12 +59,12 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="notifications.php">
-                  <i class="bi bi-bell"></i>
-                  <span class="menu-text">Notifications</span>
-                </a>
-              </li>
+            <!--<li>-->
+            <!--    <a href="notifications.php">-->
+            <!--      <i class="bi bi-bell"></i>-->
+            <!--      <span class="menu-text">Notifications</span>-->
+            <!--    </a>-->
+            <!-- </li>-->
         </ul>
     </div>
     <!-- Sidebar menu ends -->

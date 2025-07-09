@@ -1,0 +1,178 @@
+[07-Jul-2025 10:23:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:13 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:23:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: The number of variables must match the number of parameters in the prepared statement in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:313
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(313): mysqli_stmt->bind_param('i', NULL)
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php(64): Operations::getAuthOrders()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 313
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Undefined variable $cate in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Undefined variable $cate in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Undefined variable $cate in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:26:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/orders.php on line 114
+[07-Jul-2025 10:36:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:36:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:37:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:39:16 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method Operations::getAllCarts() in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php:48
+Stack trace:
+#0 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/carts.php on line 48
+[07-Jul-2025 10:49:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:359
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(359): mysqli->query('SELECT * FROM `...')
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php(60): Operations::getAllUsers()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 359
+[07-Jul-2025 10:49:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:359
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(359): mysqli->query('SELECT * FROM `...')
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php(60): Operations::getAllUsers()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 359
+[07-Jul-2025 10:49:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:359
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(359): mysqli->query('SELECT * FROM `...')
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php(60): Operations::getAllUsers()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 359
+[07-Jul-2025 10:49:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'created_at' in 'order clause' in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php:359
+Stack trace:
+#0 /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php(359): mysqli->query('SELECT * FROM `...')
+#1 /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php(60): Operations::getAllUsers()
+#2 {main}
+  thrown in /home/trymywebsites/public_html/demo.trymywebsites.com/libs/Operations.class.php on line 359
+[07-Jul-2025 11:12:05 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:05 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:05 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:07 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:47 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:47 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:12:47 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:13:11 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:13:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:13:11 UTC] PHP Warning:  Undefined variable $row in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79
+[07-Jul-2025 11:13:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/trymywebsites/public_html/demo.trymywebsites.com/admin/allUsers.php on line 79

@@ -71,7 +71,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-end mt-1">
-                                            <a class="text-danger" href="javascript:void(0);">
+                                            <a class="text-danger" href="allUsers.php">
                                                 <span>View All</span>
                                                 <i class="bi bi-arrow-right ms-2"></i>
                                             </a>
@@ -94,7 +94,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-end mt-1">
-                                            <a class="text-danger" href="javascript:void(0);">
+                                            <a class="text-danger" href="carts.php">
                                                 <span>View All</span>
                                                 <i class="bi bi-arrow-right ms-2"></i>
                                             </a>
@@ -140,7 +140,7 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-end mt-1">
-                                            <a class="text-white" href="javascript:void(0);">
+                                            <a class="text-white" href="orders.php">
                                                 <span>View All</span>
                                                 <i class="bi bi-arrow-right ms-2"></i>
                                             </a>

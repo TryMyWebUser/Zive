@@ -29,19 +29,19 @@
         <!-- Header action bar starts -->
         <div class="bg-white p-2 rounded-4 d-flex align-items-center">
             <!-- Header actions start -->
-            <div class="d-sm-flex d-none">
-                <div class="dropdown">
-                    <a class="dropdown-toggle d-flex p-3 position-relative" href="notifications.php">
-                        <i class="bi bi-bell fs-4 lh-1"></i>
-                        <span class="count-label bg-danger">9</span>
-                    </a>
-                </div>
-            </div>
+            <!--<div class="d-sm-flex d-none">-->
+            <!--    <div class="dropdown">-->
+            <!--        <a class="dropdown-toggle d-flex p-3 position-relative" href="notifications.php">-->
+            <!--            <i class="bi bi-bell fs-4 lh-1"></i>-->
+            <!--            <span class="count-label bg-danger">9</span>-->
+            <!--        </a>-->
+            <!--    </div>-->
+            <!--</div>-->
             <!-- Header actions end -->
 
             <!-- User settings start -->
             <div class="dropdown ms-2">
-                <a id="userSettings" class="dropdown-toggle user-settings" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a id="userSettings" class="dropdown-toggle user-settings border-0 p-0" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <span class="me-2 text-truncate d-lg-block d-none">Admin, Zive</span>
                     <div class="icon-box md rounded-4 fw-bold bg-primary-subtle text-primary">
                         <i class="bi bi-person-circle"></i>

@@ -34,42 +34,65 @@ class Mailer
         try {
             $this->mail->setFrom('trymywebsites@gmail.com', "Order Confirmation");
             $this->mail->addAddress($email);
-            $this->mail->addBCC("saran29032004@gmail.com"); // Admin copy
+            $this->mail->addBCC("zivewearthecomfort@gmail.com"); // Admin copy
 
             $this->mail->Subject = "Your Order #$orderId - Confirmation";
 
             // Adjust this to your actual public domain name
             $baseUrl = Config::env('BASE_URL'); // <-- Replace with your actual domain
 
-            $emailBody = "<html><body>";
-            $emailBody .= "<h3>Thank you, $name!</h3>";
-            $emailBody .= "<p>Your payment has been received. Below are your order details:</p>";
-            $emailBody .= "<p><strong>Order ID:</strong> $orderId</p>";
-
-            $emailBody .= "<table border='1' cellpadding='8' cellspacing='0' width='100%'>";
-            $emailBody .= "<tr><th>Product</th><th>Image</th><th>Quantity</th><th>Price</th><th>Subtotal</th></tr>";
-
+            $emailBody = "<html><body style='font-family: Arial, sans-serif; background-color: #fff;'>";
+            $emailBody .= "<div style='margin: auto; background-color: #fff;'>";
+            
+            $emailBody .= "<h2 style='color: #4CAF50;'>Thank you, $name!</h2>";
+            $emailBody .= "<p style='font-size: 16px;'>Your payment has been received successfully. Below are your order details:</p>";
+            
+            $emailBody .= "<p style='font-size: 16px;'><strong>Order ID:</strong> <span style='color: #333;'>$orderId</span></p>";
+            
+            $emailBody .= "<table style='width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px;'>
+                            <thead>
+                                <tr style='background-color: #f2f2f2; text-align: left;'>
+                                    <th style='padding: 10px; border: 1px solid #ddd;'>Product</th>
+                                    <th style='padding: 10px; border: 1px solid #ddd;'>Image</th>
+                                    <th style='padding: 10px; border: 1px solid #ddd;'>Quantity</th>
+                                    <th style='padding: 10px; border: 1px solid #ddd;'>Price</th>
+                                    <th style='padding: 10px; border: 1px solid #ddd;'>Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>";
+            
             $total = 0;
             foreach ($products as $item) {
                 $subtotal = $item['price'] * $item['quantity'];
                 $total += $subtotal;
-
-                $imageUrl = $baseUrl . ltrim($item['img'], '/'); // Full URL to image
-
+            
+                $imageUrl = $baseUrl . 'assets/' . ltrim($item['img'], '/');
+            
                 $emailBody .= "<tr>
-                    <td>{$item['title']}</td>
-                    <td><img src='$imageUrl' width='60' height='60' style='object-fit: cover; border-radius: 5px;' /></td>
-                    <td>{$item['quantity']}</td>
-                    <td>₹{$item['price']}</td>
-                    <td>₹" . number_format($subtotal, 2) . "</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>{$item['title']}</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>
+                        <img src='$imageUrl' width='60' height='60' style='object-fit: cover; border-radius: 5px;' />
+                    </td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>{$item['quantity']}</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>₹" . number_format($item['price'], 2) . "</td>
+                    <td style='padding: 10px; border: 1px solid #ddd;'>₹" . number_format($subtotal, 2) . "</td>
                 </tr>";
             }
+            
+            $emailBody .= "<tr style='background-color: #f9f9f9;'>
+                <td colspan='4' style='padding: 10px; border: 1px solid #ddd; text-align: right; font-weight: bold;'>Total:</td>
+                <td style='padding: 10px; border: 1px solid #ddd; font-weight: bold;'>₹" . number_format($total, 2) . "</td>
+            </tr>";
+            
+            $emailBody .= "</tbody></table>";
+            
+            $emailBody .= "<p style='margin-top: 20px; font-size: 14px;'>If you have any questions, feel free to contact us at 
+            <a href='mailto:zivewearthecomfort@gmail.com' style='color: #4CAF50;'>zivewearthecomfort@gmail.com</a>.</p>";
+            
+            $emailBody .= "<p style='font-size: 12px; color: #888;'>Zive - Wear the Comfort</p>";
+            
+            $emailBody .= "</div></body></html>";
 
-            $emailBody .= "<tr><td colspan='4' align='right'><strong>Total:</strong></td><td><strong>₹" . number_format($total, 2) . "</strong></td></tr>";
-            $emailBody .= "</table>";
-
-            $emailBody .= "<p>If you have any questions, contact us at <a href='mailto:zivewearthecomfort@gmail.com'>zivewearthecomfort@gmail.com</a></p>";
-            $emailBody .= "</body></html>";
 
             $this->mail->isHTML(true);
             $this->mail->Body = $emailBody;

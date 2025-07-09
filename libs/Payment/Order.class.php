@@ -7,6 +7,7 @@ class Order
      */
     public static function create($userId, int $amountPaise, string $gateway, string $gatewayOrderId): array
     {
+        $amountRupees = $amountPaise / 100;   // 1650 – store in DB
         $userId = (int)$userId;
         if ($userId <= 0) throw new InvalidArgumentException('Invalid user ID');
 
@@ -18,7 +19,7 @@ class Order
             $sql = "INSERT INTO orders (user_id, amount_paise, gateway, gateway_order_id, status, created_at)
                     VALUES (?, ?, ?, ?, 'pending', NOW())";
             $st = $db->prepare($sql);
-            $st->bind_param('iiss', $userId, $amountPaise, $gateway, $gatewayOrderId);
+            $st->bind_param('iiss', $userId, $amountRupees, $gateway, $gatewayOrderId);
             $st->execute();
             $orderId = $db->insert_id;
 

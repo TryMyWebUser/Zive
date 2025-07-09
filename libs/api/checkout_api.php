@@ -18,7 +18,11 @@ if (!is_array($cart) || !($cart['ok'] ?? false) || !count($cart['items'])) {
     exit(json_encode(['ok' => false, 'msg' => 'Cart is empty']));
 }
 
-$amountPaise = array_reduce($cart['items'], fn($t, $i) => $t + ((int) round($i['price'] * 100) * $i['quantity']), 0);
+$amountPaise  = array_reduce(
+    $cart['items'],
+    fn ($t, $i) => $t + (int) round($i['price'] * 100) * $i['quantity'],
+    0
+);                 // 165 000 – send to gateway
 
 $gateway = new HdfcGateway();
 $gatewayOrder = $gateway->createOrder($amountPaise);

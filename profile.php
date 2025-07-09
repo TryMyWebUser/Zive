@@ -44,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             
             #paginationControls {
-                border-top: 1px solid #eee;
-                padding: 15px 0;
+                /*border-top: 1px solid #eee;*/
+                padding-bottom: 15px;
             }
             
             .d-none {
@@ -132,36 +132,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <div class="col-12 col-md-12 col-lg-8 col-xl-8">
                             <div class="tab-content">
-                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                                    <div class="row align-items-center">
-										<form method="POST">
-											<div class="row">
-												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
-													<label for="username" class="form-label">Username *</label>
-													<input type="text" name="username" class="form-control" value="<?= $user['username']; ?>" required>
-												</div>
-												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
-													<label for="email" class="form-label">Email *</label>
-													<input type="email" name="email" class="form-control" value="<?= $user['email']; ?>" required>
-												</div>
-											</div>
-											<div class="mb-3">
-												<label for="phone" class="form-label">Phone *</label>
-												<input type="text" name="phone" class="form-control" value="<?= $user['phone']; ?>" required>
-											</div>
-											<div class="mb-3">
-												<label for="location" class="form-label">Full Address With Pincode *</label>
-												<input type="text" name="location" class="form-control" value="<?= $user['location']; ?>" required>
-											</div>
-											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
-												<div class="form-group float-end">
-													<button type="submit" name="submit_info" class="btn btn-dark">Save Changes</button>
-												</div>
-											</div>
-										</form>
-									</div>
-                                </div>
-                                
                                 <div class="tab-pane fade show active" id="orders" role="tabpanel" aria-labelledby="orders-tab">
                                     <div class="ord_list_wrap border mb-4 mfliud">
                                         <div class="ord_list_head gray d-flex align-items-center justify-content-between px-3 py-3">
@@ -172,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         <div class="ord_list_body text-left" id="ordersContainer">
                                             <!-- Orders will be loaded via JavaScript -->
                                         </div>
-                                        <div class="text-center py-3" id="paginationControls">
+                                        <div class="text-center" id="paginationControls">
                                             <button id="viewMoreBtn" class="btn btn-primary">View More Orders</button>
                                             <div id="pageNumbers" class="mt-2 d-none"></div>
                                         </div>
@@ -215,6 +185,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                         </div>
 									</div>
 									<!-- End Order List -->
+                                </div>
+                                
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row align-items-center">
+										<form method="POST">
+											<div class="row">
+												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+													<label for="username" class="form-label">Username *</label>
+													<input type="text" name="username" class="form-control" value="<?= $user['username']; ?>" required>
+												</div>
+												<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mb-3">
+													<label for="email" class="form-label">Email *</label>
+													<input type="email" name="email" class="form-control" value="<?= $user['email']; ?>" required>
+												</div>
+											</div>
+											<div class="mb-3">
+												<label for="phone" class="form-label">Phone *</label>
+												<input type="text" name="phone" class="form-control" value="<?= $user['phone']; ?>" required>
+											</div>
+											<div class="mb-3">
+												<label for="location" class="form-label">Full Address With Pincode *</label>
+												<input type="text" name="location" class="form-control" value="<?= $user['location']; ?>" required>
+											</div>
+											<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+												<div class="form-group float-end">
+													<button type="submit" name="submit_info" class="btn btn-dark">Save Changes</button>
+												</div>
+											</div>
+										</form>
+									</div>
                                 </div>
                                 
                                 <div class="tab-pane fade" id="newpassword" role="tabpanel" aria-labelledby="new-tab">
@@ -297,7 +297,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         });
                         
                         // Convert to array of order groups
-                        allOrders = Object.values(groupedOrders);
+                        allOrders = Object.values(groupedOrders).reverse();
                         
                         // Initial load
                         loadOrders();
@@ -308,38 +308,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                     
-                    // Load orders for current page
+                    // 1 Load orders for the current page
                     function loadOrders() {
                         const startIndex = (currentPage - 1) * ordersPerPage;
-                        const endIndex = startIndex + ordersPerPage;
+                        const endIndex   = startIndex + ordersPerPage;
                         const ordersToShow = allOrders.slice(startIndex, endIndex);
-                        
-                        // Clear container if it's the first page
-                        if (currentPage === 1) {
-                            ordersContainer.innerHTML = '';
-                        }
-                        
-                        // Add orders to container
-                        ordersToShow.forEach(orderGroup => {
-                            const orderHTML = createOrderHTML(orderGroup);
+                    
+                        if (currentPage === 1) ordersContainer.innerHTML = '';
+                    
+                        // ⬇ Pass the running index (1‑based) to the HTML builder
+                        ordersToShow.forEach((orderGroup, idx) => {
+                            const displayNumber = startIndex + idx + 1;   // 1, 2, 3 …
+                            const orderHTML = createOrderHTML(orderGroup, displayNumber);
                             ordersContainer.insertAdjacentHTML('beforeend', orderHTML);
                         });
-                        
-                        // Update pagination controls
+                    
                         updatePaginationControls();
                     }
                     
-                    // Create HTML for an order group
-                    function createOrderHTML(orderGroup) {
+                    // 2 Accept the extra parameter and use it
+                    function createOrderHTML(orderGroup, displayNumber) {
                         const firstItem = orderGroup[0];
                         let itemsHTML = '';
-                        
+                    
                         orderGroup.forEach(item => {
                             itemsHTML += `
                                 <div class="row align-items-center m-0 py-3 br-bottom px-2">
                                     <div class="col-md-5 col-12 d-flex">
                                         <img src="assets/${escapeHtml(item.img)}"
-                                            class="img-fluid rounded me-3" width="75" alt="">
+                                             class="img-fluid rounded me-3" width="75" alt="">
                                         <div>
                                             <h6 class="mb-1">${escapeHtml(item.product_name)}</h6>
                                             <div class="small text-muted">Qty: ${item.quantity}</div>
@@ -348,14 +345,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <div class="col-md-3 col-6">
                                         ₹${(item.unit_price * item.quantity).toFixed(2)}
                                     </div>
-                                </div>
-                            `;
+                                </div>`;
                         });
-                        
+                    
                         return `
                             <div class="order-group">
                                 <h5 class="mb-3 px-2 pt-2">
-                                    Order #${firstItem.order_id}
+                                    Order #${displayNumber}
                                     <small class="text-muted">
                                         (${firstItem.order_created_at ? formatDate(firstItem.order_created_at) : 'Date not available'})
                                     </small>
@@ -365,8 +361,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </h5>
                                 ${itemsHTML}
                                 <hr class="my-3">
-                            </div>
-                        `;
+                            </div>`;
                     }
                     
                     // Update pagination controls

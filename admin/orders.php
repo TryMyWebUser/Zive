@@ -37,7 +37,7 @@ include "../libs/load.php";
                                 <!-- Card start -->
                                 <div class="card">
                                     <div class="card-header">
-                                        <h5 class="card-title">Order History</h5>
+                                        <h5 class="card-title">Orders History</h5>
                                     </div>
                                     <div class="card-body">
                                         <!-- Table start -->
@@ -55,13 +55,15 @@ include "../libs/load.php";
                                                             <th>User Phone</th>
                                                             <th>Location</th>
                                                             <th>Order Date</th>
+                                                            <th>Quantity</th>
+                                                            <th>Amount</th>
                                                             <th>Payment</th>
                                                             <th>Action</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                     <?php
-                                                        $orders = Operations::getUserOrders();
+                                                        $orders = Operations::getAuthOrders();
                                                         if (!empty($orders)) {
                                                             $i = 1;
                                                             foreach ($orders as $row) {
@@ -92,6 +94,12 @@ include "../libs/load.php";
                                                             
                                                             <!-- Order Date -->
                                                             <td><?= date('Y/m/d', strtotime($row['paid_at'])) ?></td>
+                                                            
+                                                            <!-- Order Quantity -->
+                                                            <td><?= htmlspecialchars($row['quantity']) ?></td>
+                                                            
+                                                            <!-- Order Amount -->
+                                                            <td>₹<?= htmlspecialchars($row['amount_paise']) ?></td>
 
                                                             <!-- Payment Status -->
                                                             <td>
@@ -111,7 +119,7 @@ include "../libs/load.php";
 
                                                             <!-- Action column (custom label or icon) -->
                                                             <td>
-                                                                <span class="badge bg-primary">View</span>
+                                                                <a href="deleteOrders.php?delete_id=<?= $row['order_id']; ?>" class="btn btn-sm btn-danger">Delete</a>
                                                             </td>
                                                         </tr>
                                                     <?php

@@ -194,6 +194,43 @@ class Operations
         $res = $stmt->get_result();
         return $res->fetch_all(MYSQLI_ASSOC);   // always returns an array (empty if no rows)
     }
+    
+    public static function getAuthCarts(): array
+    {
+        $conn = Database::getConnect();
+    
+        /*  cart:     id | user (username) | product_id | quantity
+         *  products: id | title | price | img | …
+         *  users:    id | username | email | phone | location | …
+         */
+        $sql = "SELECT
+                    c.id              AS cart_id,
+                    c.user            AS username,
+                    c.quantity,
+                    
+                    /* product details */
+                    p.id              AS product_id,
+                    p.title           AS product_name,
+                    p.price           AS unit_price,
+                    p.img,
+                    
+                    /* user details (optional) */
+                    u.id              AS user_id,
+                    u.email           AS user_email,
+                    u.phone           AS user_phone,
+                    u.location        AS user_location
+                    
+                FROM cart      AS c
+                JOIN products  AS p ON p.id = c.product_id
+                LEFT JOIN users AS u ON u.username = c.user   -- remove if you don’t need user info
+                ORDER BY c.id DESC";
+    
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+    
+        $res = $stmt->get_result();
+        return $res->fetch_all(MYSQLI_ASSOC);   // always an array (possibly empty)
+    }
 
     public static function getUserOrders(): array
     {
@@ -262,6 +299,65 @@ class Operations
         $res = $stmt->get_result();
 
         return $res->fetch_all(MYSQLI_ASSOC); // always an array (even if empty)
+    }
+    
+    public static function getAuthOrders(): array
+    {
+        $conn = Database::getConnect();
+    
+        $sql = "SELECT
+                    /* ---------- orders (o) ---------- */
+                    o.id                 AS order_id,
+                    o.user_id,
+                    o.amount_paise,
+                    o.gateway,
+                    o.gateway_order_id,
+                    o.payment_id,
+                    o.status             AS order_status,
+                    o.paid_at,
+                    o.created_at         AS order_created_at,
+    
+                    /* ---------- users (u) ---------- */
+                    u.id                 AS customer_id,
+                    u.username           AS customer_name,
+                    u.email              AS customer_email,
+                    u.phone              AS customer_phone,
+                    u.location           AS customer_location,
+    
+                    /* ---------- products (p) ---------- */
+                    p.id                 AS product_id,
+                    p.img,
+                    p.title              AS product_name,
+                    p.price              AS unit_price,
+                    `p`.`sub-price`      AS sub_price,
+                    p.discount,
+                    p.category,
+                    p.status             AS product_status,
+                    p.latest             AS product_latest,
+                    p.created_at         AS product_created_at,
+    
+                    /* ---------- order_items (oi) ---------- */
+                    oi.quantity
+    
+                FROM order_items  oi
+                JOIN orders       o  ON o.id      = oi.order_id
+                JOIN products     p  ON p.id      = oi.product_id
+                JOIN users        u  ON u.id      = o.user_id
+                ORDER BY o.id DESC, oi.id";
+    
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $res = $stmt->get_result();
+    
+        return $res->fetch_all(MYSQLI_ASSOC);
+    }
+    
+    public static function getAllUsers()
+    {
+        $conn = Database::getConnect();
+        $sql = "SELECT * FROM `users` ORDER BY `uploaded_time` ASC";
+        $result = $conn->query($sql);
+        return iterator_to_array($result);
     }
 
 }
